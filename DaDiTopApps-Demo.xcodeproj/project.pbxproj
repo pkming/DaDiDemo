@@ -3,18 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CA754E68F2E710446AD633D /* Pods_DaDiTopApps_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8606E3E6C76DABE1FAD9E3 /* Pods_DaDiTopApps_Demo.framework */; };
+		EE22F420239E8AD4001983A1 /* DaDiAppsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22F41F239E8AD4001983A1 /* DaDiAppsDB.swift */; };
+		EE22F422239E8D0B001983A1 /* DaDiFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22F421239E8D0B001983A1 /* DaDiFileManager.swift */; };
+		EE22F425239EA5F6001983A1 /* SearchAppsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22F423239EA5F6001983A1 /* SearchAppsCell.swift */; };
+		EE22F426239EA5F6001983A1 /* SearchAppsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE22F424239EA5F6001983A1 /* SearchAppsCell.xib */; };
 		EEA59660239DE3B900E8F86A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA5965F239DE3B900E8F86A /* AppDelegate.swift */; };
 		EEA59662239DE3B900E8F86A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA59661239DE3B900E8F86A /* SceneDelegate.swift */; };
-		EEA59664239DE3B900E8F86A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA59663239DE3B900E8F86A /* ContentView.swift */; };
 		EEA59666239DE3BC00E8F86A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA59665239DE3BC00E8F86A /* Assets.xcassets */; };
 		EEA59669239DE3BC00E8F86A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA59668239DE3BC00E8F86A /* Preview Assets.xcassets */; };
 		EEA5966C239DE3BC00E8F86A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA5966A239DE3BC00E8F86A /* LaunchScreen.storyboard */; };
 		EEA59677239DE3BC00E8F86A /* DaDiTopApps_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA59676239DE3BC00E8F86A /* DaDiTopApps_DemoTests.swift */; };
 		EEA59682239DE3BC00E8F86A /* DaDiTopApps_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA59681239DE3BC00E8F86A /* DaDiTopApps_DemoUITests.swift */; };
+		EEA59691239DE4D100E8F86A /* MainVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA59690239DE4D100E8F86A /* MainVc.swift */; };
+		EEA5969A239DEDE300E8F86A /* SearchResultsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA59698239DEDE300E8F86A /* SearchResultsVc.swift */; };
+		EEA5969E239DF0BD00E8F86A /* AppsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA5969C239DF0BD00E8F86A /* AppsCell.swift */; };
+		EEA5969F239DF0BD00E8F86A /* AppsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA5969D239DF0BD00E8F86A /* AppsCell.xib */; };
+		EEA596A2239DF3AD00E8F86A /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA596A1239DF3AD00E8F86A /* AppModel.swift */; };
+		EEA596A7239DF8FE00E8F86A /* DaDiApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA596A6239DF8FE00E8F86A /* DaDiApi.swift */; };
+		EEA596A9239DF92100E8F86A /* DaDiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA596A8239DF92100E8F86A /* DaDiRequest.swift */; };
+		EEA596AB239DF97400E8F86A /* CustomRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA596AA239DF97400E8F86A /* CustomRefresh.swift */; };
+		EEA596AE239DFE5C00E8F86A /* RecAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA596AC239DFE5C00E8F86A /* RecAppCell.swift */; };
+		EEA596AF239DFE5C00E8F86A /* RecAppCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA596AD239DFE5C00E8F86A /* RecAppCell.xib */; };
+		EEA596B2239DFEB700E8F86A /* RecTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA596B0239DFEB700E8F86A /* RecTableCell.swift */; };
+		EEA596B3239DFEB700E8F86A /* RecTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA596B1239DFEB700E8F86A /* RecTableCell.xib */; };
+		EEF981AF239E0F400074EB81 /* SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF981AE239E0F400074EB81 /* SafeArea.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +52,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EC8DA50B12B1F275A2057C4 /* Pods-DaDiTopApps-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaDiTopApps-Demo.release.xcconfig"; path = "Target Support Files/Pods-DaDiTopApps-Demo/Pods-DaDiTopApps-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		BC8606E3E6C76DABE1FAD9E3 /* Pods_DaDiTopApps_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaDiTopApps_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3E1E3996F2DF1F8C9228942 /* Pods-DaDiTopApps-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaDiTopApps-Demo.debug.xcconfig"; path = "Target Support Files/Pods-DaDiTopApps-Demo/Pods-DaDiTopApps-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		EE22F41F239E8AD4001983A1 /* DaDiAppsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaDiAppsDB.swift; sourceTree = "<group>"; };
+		EE22F421239E8D0B001983A1 /* DaDiFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaDiFileManager.swift; sourceTree = "<group>"; };
+		EE22F423239EA5F6001983A1 /* SearchAppsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAppsCell.swift; sourceTree = "<group>"; };
+		EE22F424239EA5F6001983A1 /* SearchAppsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchAppsCell.xib; sourceTree = "<group>"; };
 		EEA5965C239DE3B900E8F86A /* DaDiTopApps-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DaDiTopApps-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA5965F239DE3B900E8F86A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEA59661239DE3B900E8F86A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EEA59663239DE3B900E8F86A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EEA59665239DE3BC00E8F86A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEA59668239DE3BC00E8F86A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EEA5966B239DE3BC00E8F86A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +72,20 @@
 		EEA5967D239DE3BC00E8F86A /* DaDiTopApps-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DaDiTopApps-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA59681239DE3BC00E8F86A /* DaDiTopApps_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaDiTopApps_DemoUITests.swift; sourceTree = "<group>"; };
 		EEA59683239DE3BC00E8F86A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEA59690239DE4D100E8F86A /* MainVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVc.swift; sourceTree = "<group>"; };
+		EEA59698239DEDE300E8F86A /* SearchResultsVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsVc.swift; sourceTree = "<group>"; };
+		EEA5969C239DF0BD00E8F86A /* AppsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsCell.swift; sourceTree = "<group>"; };
+		EEA5969D239DF0BD00E8F86A /* AppsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppsCell.xib; sourceTree = "<group>"; };
+		EEA596A1239DF3AD00E8F86A /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		EEA596A3239DF4E700E8F86A /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEA596A6239DF8FE00E8F86A /* DaDiApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaDiApi.swift; sourceTree = "<group>"; };
+		EEA596A8239DF92100E8F86A /* DaDiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaDiRequest.swift; sourceTree = "<group>"; };
+		EEA596AA239DF97400E8F86A /* CustomRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRefresh.swift; sourceTree = "<group>"; };
+		EEA596AC239DFE5C00E8F86A /* RecAppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecAppCell.swift; sourceTree = "<group>"; };
+		EEA596AD239DFE5C00E8F86A /* RecAppCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecAppCell.xib; sourceTree = "<group>"; };
+		EEA596B0239DFEB700E8F86A /* RecTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecTableCell.swift; sourceTree = "<group>"; };
+		EEA596B1239DFEB700E8F86A /* RecTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecTableCell.xib; sourceTree = "<group>"; };
+		EEF981AE239E0F400074EB81 /* SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeArea.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CA754E68F2E710446AD633D /* Pods_DaDiTopApps_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +114,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B6A237AD0EDEBEF537A402A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3E1E3996F2DF1F8C9228942 /* Pods-DaDiTopApps-Demo.debug.xcconfig */,
+				1EC8DA50B12B1F275A2057C4 /* Pods-DaDiTopApps-Demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		758340F8E34C4E941FDAACA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEA596A3239DF4E700E8F86A /* libSDWebImage.a */,
+				BC8606E3E6C76DABE1FAD9E3 /* Pods_DaDiTopApps_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EEA59653239DE3B900E8F86A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +139,8 @@
 				EEA59675239DE3BC00E8F86A /* DaDiTopApps-DemoTests */,
 				EEA59680239DE3BC00E8F86A /* DaDiTopApps-DemoUITests */,
 				EEA5965D239DE3B900E8F86A /* Products */,
+				6B6A237AD0EDEBEF537A402A /* Pods */,
+				758340F8E34C4E941FDAACA8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +157,12 @@
 		EEA5965E239DE3B900E8F86A /* DaDiTopApps-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				EEA596A5239DF8CD00E8F86A /* Tools */,
+				EEA596A0239DF39A00E8F86A /* Model */,
+				EEA59693239DED5F00E8F86A /* View */,
+				EEA5968F239DE4BA00E8F86A /* Vc */,
 				EEA5965F239DE3B900E8F86A /* AppDelegate.swift */,
 				EEA59661239DE3B900E8F86A /* SceneDelegate.swift */,
-				EEA59663239DE3B900E8F86A /* ContentView.swift */,
 				EEA59665239DE3BC00E8F86A /* Assets.xcassets */,
 				EEA5966A239DE3BC00E8F86A /* LaunchScreen.storyboard */,
 				EEA5966D239DE3BC00E8F86A /* Info.plist */,
@@ -136,6 +197,51 @@
 			path = "DaDiTopApps-DemoUITests";
 			sourceTree = "<group>";
 		};
+		EEA5968F239DE4BA00E8F86A /* Vc */ = {
+			isa = PBXGroup;
+			children = (
+				EEA59690239DE4D100E8F86A /* MainVc.swift */,
+				EEA59698239DEDE300E8F86A /* SearchResultsVc.swift */,
+			);
+			path = Vc;
+			sourceTree = "<group>";
+		};
+		EEA59693239DED5F00E8F86A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEA5969C239DF0BD00E8F86A /* AppsCell.swift */,
+				EEA5969D239DF0BD00E8F86A /* AppsCell.xib */,
+				EE22F423239EA5F6001983A1 /* SearchAppsCell.swift */,
+				EE22F424239EA5F6001983A1 /* SearchAppsCell.xib */,
+				EEA596AC239DFE5C00E8F86A /* RecAppCell.swift */,
+				EEA596AD239DFE5C00E8F86A /* RecAppCell.xib */,
+				EEA596B0239DFEB700E8F86A /* RecTableCell.swift */,
+				EEA596B1239DFEB700E8F86A /* RecTableCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEA596A0239DF39A00E8F86A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEA596A1239DF3AD00E8F86A /* AppModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EEA596A5239DF8CD00E8F86A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				EEA596A6239DF8FE00E8F86A /* DaDiApi.swift */,
+				EEA596A8239DF92100E8F86A /* DaDiRequest.swift */,
+				EEA596AA239DF97400E8F86A /* CustomRefresh.swift */,
+				EEF981AE239E0F400074EB81 /* SafeArea.swift */,
+				EE22F41F239E8AD4001983A1 /* DaDiAppsDB.swift */,
+				EE22F421239E8D0B001983A1 /* DaDiFileManager.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEA59686239DE3BC00E8F86A /* Build configuration list for PBXNativeTarget "DaDiTopApps-Demo" */;
 			buildPhases = (
+				835B5B53CE20DA51383BBD6C /* [CP] Check Pods Manifest.lock */,
 				EEA59658239DE3B900E8F86A /* Sources */,
 				EEA59659239DE3B900E8F86A /* Frameworks */,
 				EEA5965A239DE3B900E8F86A /* Resources */,
+				3EC52838CA21A15A5880C3C5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,9 +348,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEA5969F239DF0BD00E8F86A /* AppsCell.xib in Resources */,
 				EEA5966C239DE3BC00E8F86A /* LaunchScreen.storyboard in Resources */,
+				EE22F426239EA5F6001983A1 /* SearchAppsCell.xib in Resources */,
+				EEA596AF239DFE5C00E8F86A /* RecAppCell.xib in Resources */,
 				EEA59669239DE3BC00E8F86A /* Preview Assets.xcassets in Resources */,
 				EEA59666239DE3BC00E8F86A /* Assets.xcassets in Resources */,
+				EEA596B3239DFEB700E8F86A /* RecTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,14 +374,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3EC52838CA21A15A5880C3C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DaDiTopApps-Demo/Pods-DaDiTopApps-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DaDiTopApps-Demo/Pods-DaDiTopApps-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DaDiTopApps-Demo/Pods-DaDiTopApps-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		835B5B53CE20DA51383BBD6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DaDiTopApps-Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EEA59658239DE3B900E8F86A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEA596B2239DFEB700E8F86A /* RecTableCell.swift in Sources */,
+				EEF981AF239E0F400074EB81 /* SafeArea.swift in Sources */,
 				EEA59660239DE3B900E8F86A /* AppDelegate.swift in Sources */,
+				EEA596A2239DF3AD00E8F86A /* AppModel.swift in Sources */,
+				EEA5969A239DEDE300E8F86A /* SearchResultsVc.swift in Sources */,
+				EEA59691239DE4D100E8F86A /* MainVc.swift in Sources */,
+				EE22F420239E8AD4001983A1 /* DaDiAppsDB.swift in Sources */,
+				EE22F425239EA5F6001983A1 /* SearchAppsCell.swift in Sources */,
+				EEA5969E239DF0BD00E8F86A /* AppsCell.swift in Sources */,
 				EEA59662239DE3B900E8F86A /* SceneDelegate.swift in Sources */,
-				EEA59664239DE3B900E8F86A /* ContentView.swift in Sources */,
+				EE22F422239E8D0B001983A1 /* DaDiFileManager.swift in Sources */,
+				EEA596A7239DF8FE00E8F86A /* DaDiApi.swift in Sources */,
+				EEA596A9239DF92100E8F86A /* DaDiRequest.swift in Sources */,
+				EEA596AE239DFE5C00E8F86A /* RecAppCell.swift in Sources */,
+				EEA596AB239DF97400E8F86A /* CustomRefresh.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +598,7 @@
 		};
 		EEA59687239DE3BC00E8F86A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3E1E3996F2DF1F8C9228942 /* Pods-DaDiTopApps-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,6 +618,7 @@
 		};
 		EEA59688239DE3BC00E8F86A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EC8DA50B12B1F275A2057C4 /* Pods-DaDiTopApps-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
