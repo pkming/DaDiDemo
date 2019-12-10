@@ -28,6 +28,7 @@ class MainVc: UIViewController {
     var resultVC: SearchResultsVc?
     var searchBarController: UISearchController?
     var activityIndicator: UIActivityIndicatorView!
+    var isNetworkError: Bool? //判断网络请求是否失败
 
     let tableView: UITableView = {
         let tableView = UITableView(frame: CGRect(x: 0, y: 56 + 64 + SafeArea.topSafeAreaHeight(), width: width, height: height - (56 + 64 + SafeArea.topSafeAreaHeight() - SafeArea.bottomSafeAreaHeight())), style: .plain)
@@ -71,6 +72,7 @@ class MainVc: UIViewController {
             self.appsTop100.onNext(valueArr)
             self.activityIndicator.stopAnimating()
         }) {
+            self.isNetworkError = true
             self.activityIndicator.stopAnimating()
         }
     }
@@ -80,6 +82,28 @@ class MainVc: UIViewController {
         setUpSearchBar()
         setUpTableView()
         setUpActivity()
+    }
+
+    override func touchesBegan(_: Set<UITouch>, with _: UIEvent?) {
+        activityIndicator.startAnimating()
+        getDataSource(succesCallback: { apps in
+            _ = DaDiAppsDB.shard()?.add(apps)
+            // 更新数据源
+            var valueArr: Array = try! self.appsTop100.value()
+            if valueArr[0].items.count == 0 {
+                valueArr[0].items = [apps]
+            }
+            if apps.count > 0, self.tableView.isHidden {
+                self.tableView.isHidden = false
+            }
+            valueArr[1].items = apps
+            self.appsTop100.onNext(valueArr)
+            self.isNetworkError = false
+            self.activityIndicator.stopAnimating()
+        }) {
+            self.isNetworkError = true
+            self.activityIndicator.stopAnimating()
+        }
     }
 
     func setUpSearchBar() {
