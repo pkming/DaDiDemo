@@ -69,6 +69,7 @@ class DaDiAppsDB {
         }
     }
 
+    //获取数据
     func findAll() -> [AppModel]? {
         let (isCanOpen, db) = getDB()
         if !isCanOpen {

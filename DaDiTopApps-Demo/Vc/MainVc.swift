@@ -25,11 +25,12 @@ class MainVc: UIViewController {
          SectionModel(model: "2", items: [])]
     ))
 
-    var resultVC: SearchResultsVc?
-    var searchBarController: UISearchController?
-    var activityIndicator: UIActivityIndicatorView!
+    var resultVC: SearchResultsVc?  //搜索结果控制器
+    var searchBarController: UISearchController?  //搜索栏
+    var activityIndicator: UIActivityIndicatorView!  //转圈圈
     var isNetworkError: Bool? //判断网络请求是否失败
 
+    //首页
     let tableView: UITableView = {
         let tableView = UITableView(frame: CGRect(x: 0, y: 56 + 64 + SafeArea.topSafeAreaHeight(), width: width, height: height - (56 + 64 + SafeArea.topSafeAreaHeight() - SafeArea.bottomSafeAreaHeight())), style: .plain)
         tableView.register(UINib(nibName: "AppsCell", bundle: nil), forCellReuseIdentifier: "AppsCell")
@@ -44,6 +45,7 @@ class MainVc: UIViewController {
         setTablViewObserver()
         setSearchBarObserver()
 
+        //从缓存加载数据
         let allApps: [AppModel]? = DaDiAppsDB.shard()?.findAll()
         if allApps?.count ?? 0 > 0 {
             // 更新数据源
@@ -58,6 +60,7 @@ class MainVc: UIViewController {
             activityIndicator.startAnimating()
         }
 
+        //网络更新数据
         getDataSource(succesCallback: { apps in
             _ = DaDiAppsDB.shard()?.add(apps)
             // 更新数据源
@@ -84,6 +87,7 @@ class MainVc: UIViewController {
         setUpActivity()
     }
 
+    //网络异常，可点击屏幕重新加载
     override func touchesBegan(_: Set<UITouch>, with _: UIEvent?) {
         activityIndicator.startAnimating()
         getDataSource(succesCallback: { apps in

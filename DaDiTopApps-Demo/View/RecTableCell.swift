@@ -25,12 +25,15 @@ class RecTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
+        
+        //自定义cell
         flowLayout.scrollDirection = .horizontal
         flowLayout.itemSize = CGSize(width: 100, height: 180)
         flowLayout.minimumLineSpacing = 10
         flowLayout.minimumInteritemSpacing = 10
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
 
+        //设置colloctionvView属性
         recColloctionView.delegate = nil
         recColloctionView.dataSource = nil
         recColloctionView.showsHorizontalScrollIndicator = false
@@ -42,6 +45,7 @@ class RecTableCell: UITableViewCell {
         registerObs()
     }
 
+    //更新数据
     func updateCell(_ models: [AppModel]) {
         var valus = try! appsTop.value()
         valus[0].items = models
