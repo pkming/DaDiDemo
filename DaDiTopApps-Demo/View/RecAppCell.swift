@@ -9,18 +9,18 @@
 import UIKit
 
 class RecAppCell: UICollectionViewCell {
-    @IBOutlet var iconImage: UIImageView!  //图片
+    @IBOutlet var iconImage: UIImageView! // 图片
 
-    @IBOutlet var title: UILabel!   //标题
+    @IBOutlet var title: UILabel! // 标题
 
-    @IBOutlet var cate: UILabel!   //分类
+    @IBOutlet var cate: UILabel! // 分类
 
     override func awakeFromNib() {
         super.awakeFromNib()
         iconImage.layer.cornerRadius = 10
     }
 
-    //更新数据
+    // 更新数据
     public func updateCell(_ model: AppModel) {
         title.text = model.title
         cate.text = model.category
